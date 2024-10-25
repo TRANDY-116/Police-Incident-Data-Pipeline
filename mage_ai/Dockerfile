@@ -8,7 +8,12 @@ COPY requirements.txt ${USER_CODE_PATH}requirements.txt
 
 RUN pip3 install -r ${USER_CODE_PATH}requirements.txt
 
+# Update repository list and install dependencies
 RUN apt-get update -y && \
-    apt-get install -y openjdk-11-jdk
-    
-RUN ${PIP} install pyspark
+    apt-get install -y --no-install-recommends software-properties-common && \
+    add-apt-repository ppa:openjdk-r/ppa && \
+    apt-get update -y && \
+    apt-get install -y openjdk-11-jdk && \
+    apt-get clean
+
+RUN pip3 install pyspark
