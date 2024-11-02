@@ -3,7 +3,7 @@ blocks:
   color: null
   configuration: {}
   downstream_blocks:
-  - drop_columns
+  - clean_up_data
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -23,14 +23,14 @@ blocks:
   executor_type: local_python
   has_callback: false
   language: python
-  name: drop_columns
+  name: clean_up_data
   retry_config: null
-  status: not_executed
+  status: updated
   timeout: null
   type: transformer
   upstream_blocks:
   - down_police_api
-  uuid: drop_columns
+  uuid: clean_up_data
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}
