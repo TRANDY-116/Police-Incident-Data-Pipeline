@@ -1,0 +1,3 @@
+{"operation": "create", "resource": {"type": "pipeline", "uuid": "api_police_2018_copy"}, "timestamp": 1730802008, "user": null}
+{"operation": "create", "resource": {"type": "pipeline", "uuid": "api_police_2019_copy"}, "timestamp": 1730802037, "user": null}
+{"operation": "create", "resource": {"type": "pipeline", "uuid": "api_police_2020_copy"}, "timestamp": 1730802065, "user": null}

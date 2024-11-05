@@ -160,6 +160,7 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+<<<<<<< HEAD
 
 # Default .gitignore content added by dbt Cloud# you shouldn't commit these into source control
 # these are the default directory names, adjust/add to fit your needs
@@ -167,3 +168,6 @@ target/
 dbt_packages/
 logs/
 # end dbt Cloud content
+=======
+io_config.yaml
+>>>>>>> e3ab2dc0a74f056d32c879c351bae2f93147d087

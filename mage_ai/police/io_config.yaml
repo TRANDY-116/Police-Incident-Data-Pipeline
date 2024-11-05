@@ -82,10 +82,10 @@ default:
   # PostgresSQL
   POSTGRES_CONNECT_TIMEOUT: 10
   POSTGRES_DBNAME: postgres
-  POSTGRES_SCHEMA: public # Optional
-  POSTGRES_USER: username
-  POSTGRES_PASSWORD: password
-  POSTGRES_HOST: hostname
+  POSTGRES_SCHEMA: policedb # Optional
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: postgres
+  POSTGRES_HOST: postgres
   POSTGRES_PORT: 5432
   # Qdrant
   QDRANT_COLLECTION: collection
@@ -97,7 +97,8 @@ default:
   REDSHIFT_PORT: 5439
   REDSHIFT_TEMP_CRED_USER: temp_username
   REDSHIFT_TEMP_CRED_PASSWORD: temp_password
-  REDSHIFT_DBUSER: redshift_db_user
+  REDSHIFT_DBUSER: redshift_db_userPROJECT_NAME=police
+
   REDSHIFT_CLUSTER_ID: redshift_cluster_id
   REDSHIFT_IAM_PROFILE: default
   # Snowflake
