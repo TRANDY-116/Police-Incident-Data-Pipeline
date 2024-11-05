@@ -8,18 +8,18 @@ blocks:
   executor_type: local_python
   has_callback: false
   language: python
-  name: down_police_api
+  name: downlaod_2019
   retry_config: null
   status: executed
   timeout: null
   type: data_loader
   upstream_blocks: []
-  uuid: down_police_api
+  uuid: downlaod_2019
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
-  - postgres_loader
+  - loading_to__2019_db
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -30,7 +30,7 @@ blocks:
   timeout: null
   type: transformer
   upstream_blocks:
-  - down_police_api
+  - downlaod_2019
   uuid: clean_up_data
 - all_upstream_blocks_executed: true
   color: null
@@ -40,14 +40,14 @@ blocks:
   executor_type: local_python
   has_callback: false
   language: python
-  name: postgres_loader
+  name: loading to  2019 db
   retry_config: null
   status: executed
   timeout: null
   type: data_exporter
   upstream_blocks:
   - clean_up_data
-  uuid: postgres_loader
+  uuid: loading_to__2019_db
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
