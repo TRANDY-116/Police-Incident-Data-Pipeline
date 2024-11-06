@@ -1,0 +1,13 @@
+policedb:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: postgres
+      port: 5432
+      dbname: postgres
+      schema: policedb
+      threads: 1
+      connect_timeout: 30
