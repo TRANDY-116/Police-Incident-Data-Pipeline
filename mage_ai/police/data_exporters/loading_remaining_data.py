@@ -36,9 +36,9 @@ def export_data_to_postgres(df: DataFrame, **kwargs) -> None:
             
             # Export data for the current year to the respective table
             loader.export(
-                data.drop(columns=['year']),  # Drop the helper 'year' column before export
+                data.drop(columns=['year']),  
                 schema_name='policedb',
                 table_name=table_name,
                 index=False,
-                if_exists='append'  # Append to table if it already exists
+                if_exists='append' 
             )
