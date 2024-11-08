@@ -1,0 +1,4 @@
+models:
+  - name: all_records
+    tests:
+      - integer_range_test
