@@ -1,13 +1,221 @@
-select * from {{ source('police_data', 'police_2018') }}
+select 
+    incident_datetime::timestamp,
+    incident_date::date,
+    incident_time::text,
+    incident_year::integer,
+    incident_day_of_week::text,
+    report_datetime::timestamp,
+    row_id::bigint,
+    incident_id::bigint,
+    incident_number::text,
+    cad_number::text,
+    report_type_code::text,
+    report_type_description::text,
+    incident_code::integer,
+    incident_category::text,
+    incident_subcategory::text,
+    incident_description::text,
+    resolution::text,
+    _intersection::text,
+    cnn::bigint,
+    police_district::text,
+    analysis_neighborhood::text,
+    supervisor_district::integer,
+    supervisor_district_2012::integer,
+    latitude::numeric,
+    longitude::numeric,
+    point::text,
+    case when filed_online = 1.0 then true else false end as filed_online
+from {{ source('police_data', 'police_2018') }}
+
 union all
-select * from {{ source('police_data', 'police_2019') }}
+
+select 
+    incident_datetime::timestamp,
+    incident_date::date,
+    incident_time::text,
+    incident_year::integer,
+    incident_day_of_week::text,
+    report_datetime::timestamp,
+    row_id::bigint,
+    incident_id::bigint,
+    incident_number::text,
+    cad_number::text,
+    report_type_code::text,
+    report_type_description::text,
+    incident_code::integer,
+    incident_category::text,
+    incident_subcategory::text,
+    incident_description::text,
+    resolution::text,
+    _intersection::text,
+    cnn::bigint,
+    police_district::text,
+    analysis_neighborhood::text,
+    supervisor_district::integer,
+    supervisor_district_2012::integer,
+    latitude::numeric,
+    longitude::numeric,
+    point::text,
+    case when filed_online = 1.0 then true else false end as filed_online
+from {{ source('police_data', 'police_2019') }}
+
 union all
-select * from {{ source('police_data', 'police_2020') }}
+
+select 
+    incident_datetime::timestamp,
+    incident_date::date,
+    incident_time::text,
+    incident_year::integer,
+    incident_day_of_week::text,
+    report_datetime::timestamp,
+    row_id::bigint,
+    incident_id::bigint,
+    incident_number::text,
+    cad_number::text,
+    report_type_code::text,
+    report_type_description::text,
+    incident_code::integer,
+    incident_category::text,
+    incident_subcategory::text,
+    incident_description::text,
+    resolution::text,
+    _intersection::text,
+    cnn::bigint,
+    police_district::text,
+    analysis_neighborhood::text,
+    supervisor_district::integer,
+    supervisor_district_2012::integer,
+    latitude::numeric,
+    longitude::numeric,
+    point::text,
+    case when filed_online = 1.0 then true else false end as filed_online
+from {{ source('police_data', 'police_2020') }}
+
 union all
-select * from {{ source('police_data', 'police_2021') }}
+
+select 
+    incident_datetime::timestamp,
+    incident_date::date,
+    incident_time::text,
+    incident_year::integer,
+    incident_day_of_week::text,
+    report_datetime::timestamp,
+    row_id::bigint,
+    incident_id::bigint,
+    incident_number::text,
+    cad_number::text,
+    report_type_code::text,
+    report_type_description::text,
+    incident_code::integer,
+    incident_category::text,
+    incident_subcategory::text,
+    incident_description::text,
+    resolution::text,
+    _intersection::text,
+    cnn::bigint,
+    police_district::text,
+    analysis_neighborhood::text,
+    supervisor_district::integer,
+    supervisor_district_2012::integer,
+    latitude::numeric,
+    longitude::numeric,
+    point::text,
+    case when filed_online = 1.0 then true else false end as filed_online
+from {{ source('police_data', 'police_2021') }}
+
 union all
-select * from {{ source('police_data', 'police_2022') }}
+
+select 
+    incident_datetime::timestamp,
+    incident_date::date,
+    incident_time::text,
+    incident_year::integer,
+    incident_day_of_week::text,
+    report_datetime::timestamp,
+    row_id::bigint,
+    incident_id::bigint,
+    incident_number::text,
+    cad_number::text,
+    report_type_code::text,
+    report_type_description::text,
+    incident_code::integer,
+    incident_category::text,
+    incident_subcategory::text,
+    incident_description::text,
+    resolution::text,
+    _intersection::text,
+    cnn::bigint,
+    police_district::text,
+    analysis_neighborhood::text,
+    supervisor_district::integer,
+    supervisor_district_2012::integer,
+    latitude::numeric,
+    longitude::numeric,
+    point::text,
+    case when filed_online = 1.0 then true else false end as filed_online
+from {{ source('police_data', 'police_2022') }}
+
 union all
-select * from {{ source('police_data', 'police_2023') }}
+
+select 
+    incident_datetime::timestamp,
+    incident_date::date,
+    incident_time::text,
+    incident_year::integer,
+    incident_day_of_week::text,
+    report_datetime::timestamp,
+    row_id::bigint,
+    incident_id::bigint,
+    incident_number::text,
+    cad_number::text,
+    report_type_code::text,
+    report_type_description::text,
+    incident_code::integer,
+    incident_category::text,
+    incident_subcategory::text,
+    incident_description::text,
+    resolution::text,
+    _intersection::text,
+    cnn::bigint,
+    police_district::text,
+    analysis_neighborhood::text,
+    supervisor_district::integer,
+    supervisor_district_2012::integer,
+    latitude::numeric,
+    longitude::numeric,
+    point::text,
+    case when filed_online = 1.0 then true else false end as filed_online
+from {{ source('police_data', 'police_2023') }}
+
 union all
-select * from {{ source('police_data', 'police_2024') }}
+
+select 
+    incident_datetime::timestamp,
+    incident_date::date,
+    incident_time::text,
+    incident_year::integer,
+    incident_day_of_week::text,
+    report_datetime::timestamp,
+    row_id::bigint,
+    incident_id::bigint,
+    incident_number::text,
+    cad_number::text,
+    report_type_code::text,
+    report_type_description::text,
+    incident_code::integer,
+    incident_category::text,
+    incident_subcategory::text,
+    incident_description::text,
+    resolution::text,
+    _intersection::text,
+    cnn::bigint,
+    police_district::text,
+    analysis_neighborhood::text,
+    supervisor_district::integer,
+    supervisor_district_2012::integer,
+    latitude::numeric,
+    longitude::numeric,
+    point::text,
+    case when filed_online = 1.0 then true else false end as filed_online
+from {{ source('police_data', 'police_2024') }}
