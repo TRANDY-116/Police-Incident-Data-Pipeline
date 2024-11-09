@@ -13,12 +13,7 @@ select
     longitude,
     _intersection
 from {{ source('police_data', 'police_2018') }}
-
-union all
-
-select
-    incident_id,
-    incident_number,
+\
     incident_day_of_week,
     CAST(incident_datetime AS timestamp) AS incident_datetime,
     incident_category,
