@@ -7,7 +7,7 @@ with raw_data as (
         extract(month from incident_datetime) as incident_month,
         extract(day from incident_datetime) as incident_day,
         filed_online::boolean as filed_online
-    from {{ source('police_data', 'all_records') }}
+    from {{ source('police_data_st', 'all_records') }}
 )
 
 select * from raw_data

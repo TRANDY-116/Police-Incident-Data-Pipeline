@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: police_data_st
+    database: postgres  
+    schema: policedb   
+    tables:
+      - name: police_2018
+      - name: police_2019
+      - name: police_2020
+      - name: police_2021
+      - name: police_2022
+      - name: police_2023
+      - name: police_2024
+      - name: all_records
