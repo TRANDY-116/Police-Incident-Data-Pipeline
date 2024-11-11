@@ -3,6 +3,7 @@ with dates as (
         '2015-01-01'::date, '2025-12-31'::date, interval '1 day'
     ) as date
 )
+
 select
     date as full_date,
     extract(year from date) as year,
