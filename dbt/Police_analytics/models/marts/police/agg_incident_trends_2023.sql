@@ -13,5 +13,4 @@ with monthly_counts as (
     group by 1, 2, 4, incident_datetime
     order by 1, 2
 )
-
 select * from monthly_counts
