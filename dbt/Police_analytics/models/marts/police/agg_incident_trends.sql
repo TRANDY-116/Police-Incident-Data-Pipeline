@@ -1,6 +1,6 @@
 with monthly_counts as (
     select
-        date_trunc('month', incident_datetime) as incident_month,
+        incident_month,
         incident_category,
         count(*) as incident_count,
         incident_day_of_week,
@@ -10,7 +10,7 @@ with monthly_counts as (
             else 'Other' 
         end as season
     from {{ ref('stg_police_incidents') }}
-    group by 1, 2
+    group by 1, 2, 4, incident_datetime
     order by 1, 2
 )
 
