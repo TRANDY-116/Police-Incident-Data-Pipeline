@@ -17,7 +17,7 @@ def load_data_from_api(*args, **kwargs):
     # Define the URL with a $where clause to limit data to 2018 and onward
     url = (
         "https://data.sfgov.org/resource/wg3w-h783.json?$limit=5000000"
-        "&$where=incident_datetime >= '2018-01-01T00:00:00.000'"
+        "&$where=incident_datetime >= '2019-01-01T00:00:00.000'"
     )
 
     response = requests.get(url)
