@@ -14,7 +14,7 @@ def load_data_from_api(*args, **kwargs):
     """
     Load records from the API for events occurring from 2020 to the latest available data.
     """
-    # Define the URL with a $where clause to limit data to 2020 and onward
+    # Define the URL with a $where clause to limit data to 2018 and onward
     url = (
         "https://data.sfgov.org/resource/wg3w-h783.json?$limit=5000000"
         "&$where=incident_datetime >= '2018-01-01T00:00:00.000'"
@@ -40,4 +40,3 @@ def test_output(output, *args) -> None:
     """
     assert output is not None, 'The output is undefined'
     assert not output.empty, 'The output data is empty'
-    # Optional: Add more assertions to validate the data range starts from 2020
