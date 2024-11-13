@@ -6,6 +6,7 @@ This project builds a data pipeline to ingest, transform, and analyze police inc
 
 1. **Data Ingestion**:
    - **API Data**: Police incident data is fetched from an external API.
+      https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-2018-to-Present/wg3w-h783/about_data
    - **Orchestration**: Mage AI manages the data ingestion pipeline, ensuring smooth extraction and loading into the database.
 
 2. **Database**:
