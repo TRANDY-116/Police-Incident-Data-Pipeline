@@ -1,21 +1,21 @@
-FROM apache/airflow:3.1.0
-
-# Switch to root to install system packages first
+FROM apache/airflow:3.0.5
 USER root
-RUN apt-get update && apt-get install -y \
-    git \
-    curl \
-    vim \
-    less \
-    && apt-get clean
 
-# Switch back to airflow user for pip installs
-USER airflow
+ENV AIRFLOW_HOME=/opt/airflow
+RUN apt-get update -qq && apt-get install vim -qqq
+# git gcc g++ -qqq
 
-# Copy and install Python requirements if they exist
-COPY --chown=airflow:root requirements.txt* ./
-RUN if [ -f requirements.txt ]; then \
-        pip install --no-cache-dir -r requirements.txt; \
-    fi
+COPY requirements.txt .
+USER $AIRFLOW_UID
+RUN pip install --no-cache-dir -r requirements.txt
 
-SHELL ["/bin/bash", "-o", "pipefail", "-e", "-u", "-x", "-c"]
+# Ref: https://airflow.apache.org/docs/docker-stack/recipes.html
+
+# SHELL ["/bin/bash", "-o", "pipefail", "-e", "-u", "-x", "-c"]
+
+WORKDIR $AIRFLOW_HOME
+
+# COPY scripts scripts
+# RUN chmod +x scripts
+
+USER $AIRFLOW_UID
