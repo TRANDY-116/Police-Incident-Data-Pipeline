@@ -19,17 +19,16 @@ def _calculate_stats(input_path, output_path):
     
 public_holidays = EventsTimetable(
     event_dates=[
-        datetime.date(2024, 1, 1), 
-        datetime.date(2024, 1, 6), 
-        datetime.date(2024, 4, 1)],
+        datetime(2024, 1, 1), 
+        datetime(2024, 1, 6), 
+        datetime(2024, 4, 1)],
     restrict_to_events=True,
-    timezone='UTC',
 )
 
 with DAG(
     dag_id="07_events_timetable",
     schedule=public_holidays,
-    start_date=pendulum.datetime(year=2024, month=1, day=1),
+    start_date=datetime(year=2024, month=1, day=1),
     catchup=True,
 ):
     fetch_events = BashOperator(
