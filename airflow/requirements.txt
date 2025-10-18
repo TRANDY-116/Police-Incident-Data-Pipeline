@@ -1,5 +1,9 @@
 apache-airflow-providers-amazon
 apache-airflow-providers-google
+apache-airflow-providers-postgres
+apache-airflow-providers-dbt-cloud
+apache-airflow-providers-snowflake
+apache-airflow-providers-tableau
 pyarrow
 pandas
 requests

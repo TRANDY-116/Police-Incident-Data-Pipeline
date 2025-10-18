@@ -162,7 +162,7 @@ def generate_monthly_downloads():
 
 # --- Airflow DAG ---
 with DAG(
-    dag_id="sf_incidents_to_postgres",
+    dag_id="001_sf_incidents_to_postgres",
     start_date=datetime(2018, 1, 1),
     schedule="@monthly",
     catchup=True,
